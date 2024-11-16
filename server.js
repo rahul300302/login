@@ -12,6 +12,15 @@ app.use(express.urlencoded({extended:false}))
 
 mongoose.connect(process.env.MONGODB_URL).then(()=>console.log("DB Connnect Successfully")).catch(err=>console.log(err))
 
+app.get("/old-url", (req, res) => {
+    // Perform a 301 (permanent) redirect
+    res.redirect(301, "/new-url");
+  });
+  
+  // New URL route
+  app.get("/new-url", (req, res) => {
+    res.send("You have been redirected to the new URL!");
+  });
 app.get("/",async(req,res)=>{
 res.send("hello world")
 })
