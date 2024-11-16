@@ -1,7 +1,7 @@
 [build]
   command = "npm run dev"
   publish = "build"
-  base = "server"  # Update to the correct path where server.js is located
+  base = "login"  # Update to the correct path where server.js is located
 
 [build.environment]
   NODE_VERSION = "22"
