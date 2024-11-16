@@ -1,6 +1,13 @@
 [build]
   command = "npm run build"  # For front-end build
   publish = "build"
+  base = "/"  # Update to the correct path where server.js is located
+
+[build.environment]
+  NODE_VERSION = "22"
+  PORT = "3000"
+  MONGODB_URL = "mongodb+srv://rahulraw2002:86QzgS73eXe61PQ2@cluster0.s5p1x.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
+
 
 [functions]
   directory = "netlify-functions"  # Directory for Netlify Functions
