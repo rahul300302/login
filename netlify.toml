@@ -1,10 +1,10 @@
 # netlify.toml
 [build]
   # The command to build the site. Netlify runs this after installing dependencies.
-  command = "npm run start"
+  command = "npm run build"
 
   # The directory to deploy after build (if your built assets are in a specific folder like /dist or /build)
-  publish = "start"  # This could be dist or public depending on your project setup
+  publish = "build"  # This could be dist or public depending on your project setup
 
   # The directory where your app's source code is located. If your app is in a subdirectory, you can specify it here.
   base = "/"
