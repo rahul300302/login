@@ -1,32 +1,18 @@
-# netlify.toml
-
 [build]
-  # The command to build the site. Netlify runs this after installing dependencies.
   command = "npm run build"
+  publish = "build"
+  base = "server.js"
+  environment = { NODE_VERSION = "22",PORT="3000",
+MONGODB_URL="mongodb+srv://rahulraw2002:86QzgS73eXe61PQ2@cluster0.s5p1x.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
+ }
 
-  # The directory to deploy after build (if your built assets are in a specific folder like /dist or /build)
-  publish = "npm run dev"  # Replace 'build' with your actual build directory if different.
-
-  # The directory where your app's source code is located. If your app is in a subdirectory, you can specify it here.
-  base = "/" 
-
-  # Optional: If you use a specific Node.js version, specify it here.
-  environment = { NODE_VERSION = "22" }
-
-# Optional: Define environment variables if needed.
 [context.production.environment]
   NODE_ENV = "production"
 
-# Optional: Redirects (if your app has any URLs to redirect)
 [[redirects]]
   from = "/old-url"
   to = "/new-url"
   status = 301
 
-# Functions configuration (if using serverless functions)
 [build.functions]
-  directory = "netlify-functions"  # Folder for serverless functions
-
-# Edge Functions (if needed)
-[build.edge_functions]
-  directory = "netlify-edge-functions"
+  directory = "netlify-functions"
