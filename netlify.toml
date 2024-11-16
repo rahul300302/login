@@ -5,7 +5,7 @@
   command = "npm run build"
 
   # The directory to deploy after build (if your built assets are in a specific folder like /dist or /build)
-  publish = "build"  # Replace 'build' with your actual build directory if different.
+  publish = "npm run dev"  # Replace 'build' with your actual build directory if different.
 
   # The directory where your app's source code is located. If your app is in a subdirectory, you can specify it here.
   base = "/" 
