@@ -13,7 +13,7 @@ app.use(express.urlencoded({extended:false}))
 mongoose.connect(process.env.MONGODB_URL).then(()=>console.log("DB Connnect Successfully")).catch(err=>console.log(err))
 
 
-app.get("/signup",async(req,res)=>{
+app.get("/",async(req,res)=>{
     try {
         const email  = "abced@123"
         const password="99665655"
